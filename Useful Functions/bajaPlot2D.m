@@ -1,4 +1,4 @@
-function bajaPlot2D(xData, yData, xDataName, yDataName, names, style)
+function fh = bajaPlot2D(xData, yData, xDataName, yDataName, names, style)
 
 fh = figure;
 plot(xData, yData, style);

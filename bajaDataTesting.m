@@ -5,6 +5,7 @@ allUnis = getParticipatingUnis(allResults, wrongNames);
 
 %%
 close all;
+clc;
 
 %yeeYee1 = getCompResults(allResults, "getCompResults")
 
@@ -25,7 +26,7 @@ close all;
 
 %yeeYee8 = getClosestComps(allResults)
 
-yeeYee9 = graphResults2D(allResults, 58, "overallScore", "landManeuScore")
+yeeYee9 = graphResults2D(allResults, 56, "overallScore", "landManeuScore")
  
 %graphLine2D(yeeYee9)
 
