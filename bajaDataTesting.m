@@ -26,7 +26,7 @@ clc;
 
 %yeeYee8 = getClosestComps(allResults)
 
-yeeYee9 = graphResults2D(allResults, 56, "overallScore", "landManeuScore")
+yeeYee9 = graphResults2D(allResults, 56, "overallScore", "accelScore")
  
 %graphLine2D(yeeYee9)
 
