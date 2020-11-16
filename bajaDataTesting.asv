@@ -8,10 +8,10 @@ close all;
 
 %yeeYee1 = getCompResults(allResults, "getCompResults")
 
-%yeeYee2 = getCompsAttended(allResults, wrongNames, "Univ of Illinois - Urbana Champaign", allUnis)
-% writetable(yeeYee2, 'UIUCAllResults.xlsx')
+yeeYee2 = getCompsAttended(allResults, wrongNames, "Univ of Illinois - Urbana Champaign", allUnis)
+writetable(yeeYee2, 'UIUCAllResults.xlsx')
 
-% wrongNamesTwo = strings;
+wrongNamesTwo = strings;
 
 %yeeYee4 = getIronTeamResults(allResults, wrongNamesTwo, "2015");
 
@@ -25,8 +25,8 @@ close all;
 
 %yeeYee8 = getClosestComps(allResults)
 
-yeeYee9 = graphResults2D(allResults, 58, "overallScore", "landManeuScore")
- 
+yeeYee9 = graphResults2D(allResults, 60, "accelScore", "susTracScore")
+
 %graphLine2D(yeeYee9)
 
 %yeeYee10 = graphResults3D(allResults, 55, "enduroScore", "overallDynamic", "overallStatic")
