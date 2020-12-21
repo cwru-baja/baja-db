@@ -19,11 +19,11 @@ participatingUnis = sort(participatingUnis);
 
 %remove first string if it's blank
 if strlength(participatingUnis(1)) == 0
-    participatingUnis = participatingUnis(2:size(participatingUnis, 2))
+    participatingUnis = participatingUnis(2:size(participatingUnis, 2));
 end
 
 %finally run cleaning algorithm
-participatingUnis = cleanParticipatingUnis(participatingUnis, dupNames)
+participatingUnis = cleanParticipatingUnis(participatingUnis, dupNames);
 
 %this function attempts to clean up the generated list, figuring out which
 %names belong to the same university
@@ -37,7 +37,7 @@ participatingUnis = cleanParticipatingUnis(participatingUnis, dupNames)
             for j = 1:size(uniList, 2)
                 if i ~= j
                     if contains(uniList(i), uniList(j), 'IgnoreCase', true) || strcmp(strrep(uniList(i),' ',''), strrep(uniList(j),' ',''))
-                        participatingUnis(2, i) = participatingUnis(2, j)
+                        participatingUnis(2, i) = participatingUnis(2, j);
                     end
                 end
             end
@@ -47,7 +47,7 @@ participatingUnis = cleanParticipatingUnis(participatingUnis, dupNames)
         %then be filtered
         if dupNames ~= strings
             for i = 1:size(uniList, 2)
-                tempIndex = find(participatingUnis(1, i) == dupNames(1, :))
+                tempIndex = find(participatingUnis(1, i) == dupNames(1, :));
                 
                 if ~isempty(find(participatingUnis(1, i) == dupNames(1, :)))
                     participatingUnis(2, i) = find(dupNames(2, tempIndex) == participatingUnis(1, :));
