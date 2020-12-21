@@ -32,7 +32,7 @@ avgRanks = cell(1, 3);
 for i = 1:size(uniNumbers, 2)
     indicies = str2double(uniNames(2,:)) == uniNumbers(i);
     
-    names = uniNames(1, indicies)
+    names = uniNames(1, indicies);
     
     compCounter = 0;
     pointsTotal = 0;
@@ -43,8 +43,8 @@ for i = 1:size(uniNumbers, 2)
         if kkb ~= ""
             if size(kkb, 1) == 1
                 for k = 1:size(kkb, 1)
-                    pointsTotal = pointsTotal + yearResults{j, 1}.overallScore(yearResults{j, 1}.universityName == kkb(k))
-                    compCounter = compCounter + 1
+                    pointsTotal = pointsTotal + yearResults{j, 1}.overallScore(yearResults{j, 1}.universityName == kkb(k));
+                    compCounter = compCounter + 1;
                 end
             end
         end
@@ -54,7 +54,7 @@ for i = 1:size(uniNumbers, 2)
         newRow = cell(1, 3);
         newRow(1, 1) = {convertStringsToChars(names(1))};
         newRow(1, 2) = {num2str(pointsTotal(1)/compCounter)};
-        newRow(1, 3) = {compCounter}
+        newRow(1, 3) = {compCounter};
         
         avgRanks = [avgRanks; newRow];
     end
