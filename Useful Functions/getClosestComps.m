@@ -27,20 +27,20 @@ for i = 1:3:size(dataIn, 1)
     end
 end
 
-closestComps = cell(numResults, 4)
+closestComps = cell(numResults, 4);
 
-closestComps(:, 4) = {0}
+closestComps(:, 4) = {0};
 
 for i = 1:size(yearResults, 1)
-    winnerDiff = yearResults{i, 1}.overallScore(1) - yearResults{i, 1}.overallScore(2)
-    relWinnerDiff = winnerDiff / yearResults{i, 1}.overallScore(1)
+    winnerDiff = yearResults{i, 1}.overallScore(1) - yearResults{i, 1}.overallScore(2);
+    relWinnerDiff = winnerDiff / yearResults{i, 1}.overallScore(1);
     
-    closestComps(i, 4) = {relWinnerDiff}
+    closestComps(i, 4) = {relWinnerDiff};
     
     
-    closestComps{i, 3} = yearResults{i, 1}.overallScore(1)
-    closestComps{i, 2} = yearResults{i, 1}.universityName(1)
-    closestComps{i, 1} = yearResults{i, 3}
+    closestComps{i, 3} = yearResults{i, 1}.overallScore(1);
+    closestComps{i, 2} = yearResults{i, 1}.universityName(1);
+    closestComps{i, 1} = yearResults{i, 3};
 end
 
 sortingColumn = cell2mat(closestComps(:,4));
