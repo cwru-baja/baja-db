@@ -16,7 +16,6 @@ plot(xData, yData, style);
    xDataClean = compGraphClean(:, 1);
    yDataClean = compGraphClean(:, 2);
     
-   hold on
   % generating and plotting linear regression to clean data
    fit_line = fitlm(xDataClean, yDataClean)
    plot(fit_line);
