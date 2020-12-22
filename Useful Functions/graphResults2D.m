@@ -1,4 +1,4 @@
-function compGraph = graphResults2D(dataIn, compNumber, xDataName, yDataName)
+function model = graphResults2D(dataIn, compNumber, xDataName, yDataName)
     % getting results table from selected competition
     results = getCompResults(dataIn, compNumber);
     
@@ -8,7 +8,7 @@ function compGraph = graphResults2D(dataIn, compNumber, xDataName, yDataName)
     teamNames = results.universityName;
     
     % initial plotting of points
-    fig = bajaPlot2D(xData, yData, xDataName, yDataName, teamNames, 'b*');
+    [fig, model] = bajaPlot2D(xData, yData, xDataName, yDataName, teamNames, 'b*');
     
     figure(fig);
     

@@ -1,4 +1,4 @@
-function [fh, rSquared] = bajaPlot2D(xData, yData, xDataName, yDataName, names, style)
+function [fh, fit_line] = bajaPlot2D(xData, yData, xDataName, yDataName, names, style)
 
 fh = figure;
 plot(xData, yData, style);
